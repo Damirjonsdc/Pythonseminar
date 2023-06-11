@@ -9,23 +9,21 @@
 
 # получаем первый массив
 n = int(input("Введите количество элементов в первом массиве: "))
-a = []
+array_1 = []
 for i in range(n):
-    a.append(int(input("Введите элемент: ")))
+    array_1.append(int(input("Введите элемент: ")))
 
 # получаем второй массив
 m = int(input("Введите количество элементов во втором массиве: "))
-b = []
+array_2 = []
 for i in range(m):
-    b.append(int(input("Введите элемент: ")))
+    array_2.append(int(input("Введите элемент: ")))
 
-# создаем множества из двух массивов
-set_a = set(a)
-set_b = set(b)
-
-# находим разность множеств и выводим результат
+# находим элементы первого массива, которых нет во втором массиве
 result = []
-for elem in a:
-    if elem not in set_b:
+for elem in array_1:
+    if elem not in set(array_2):
         result.append(elem)
+
+# выводим результат
 print(result)
